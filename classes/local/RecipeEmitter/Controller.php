@@ -79,6 +79,8 @@ class Controller extends \stdClass {
             $edapp->setName($translatorevent['app_name'])->setDescription($translatorevent['app_description']);
             $person = new agent\Person($translatorevent['user_id']);
             $person->setName($translatorevent['user_name']);
+            $personextensions = array("email" => $translatorevent['user_email']);
+            $person->setExtensions($personextensions);
             $session = new session\Session($translatorevent['session_id']);
             $session->setActor($person);
             $caliperevent->setEdApp($edapp)->setActor($person)->setFederatedSession($session)->setEventTime($t);

@@ -57,6 +57,7 @@ class Event extends \stdClass {
             'session_id' => $sessionid,
             'user_id' => "{$expandedevent['user']->url}/user/{$expandedevent['user']->id}",
             'user_name' => "{$expandedevent['user']->firstname} {$expandedevent['user']->lastname}",
+            'user_email' => $expandedevent['user']->email,
             'member' => "{$expandedevent['user']->url}/course/{$expandedevent['course']->id}/user/{$expandedevent['user']->id}",
             'time' => date('c', $expandedevent['event']['timecreated']),
             'app_name' => $expandedevent['app']->fullname ?: 'A Moodle course',
