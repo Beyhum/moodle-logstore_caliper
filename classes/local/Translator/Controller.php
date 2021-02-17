@@ -67,6 +67,7 @@ class Controller extends \stdClass {
         '\mod_quiz\event\attempt_started' => 'AttemptStarted',
         '\mod_quiz\event\attempt_submitted' => 'AttemptCompleted',
         '\mod_quiz\event\attempt_reviewed' => 'ModuleViewed',
+        '\mod_zoom\event\join_meeting_button_clicked' => 'ModuleViewed'
     ];
 
     /**

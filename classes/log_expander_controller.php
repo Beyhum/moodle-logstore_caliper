@@ -45,5 +45,6 @@ class log_expander_controller extends Controller {
         parent::__construct($repo);
         static::$routes['\mod_quiz\event\attempt_started'] = 'AttemptEvent';
         static::$routes['\mod_quiz\event\attempt_submitted'] = 'AttemptEvent';
+        static::$routes['\mod_zoom\event\join_meeting_button_clicked'] = 'ModuleEvent';
     }
 }
